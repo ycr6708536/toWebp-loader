@@ -1,0 +1,36 @@
+{
+  "name": "toWebp-loader",
+  "version": "0.0.1",
+  "description": "WebP image loader & converter for Webpack && 保留源文件和生成的webp文件，如果使用hash命名，则使用源文件的hash。本loader已经继承了file-loader的功能",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/webpack/bin/webpack.js -p --config test/webpack.config.js",
+    "lint": "node_modules/eslint/bin/eslint.js index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ycr6708536/toWebp-loader.git"
+  },
+  "keywords": [
+    "webpack",
+    "webp",
+    "image"
+  ],
+  "author": "ice yan <24732077@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "loader-utils": "^0.2.16",
+    "imagemin": "^5.2.2",
+    "mine": "^0.1.0",
+    "imagemin-webp": "^4.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.3.0",
+    "file-loader": "^0.9.0",
+    "multi-loader": "^0.1.0",
+    "webpack": "^1.13.1"
+  },
+  "engines": {
+    "node": ">=0.6"
+  }
+}
