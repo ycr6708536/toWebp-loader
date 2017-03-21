@@ -16,7 +16,7 @@ module.exports = function(content) {
   var callback = this.async();
   var called = false;
 
-  var query = loaderUtils.parseQuery(this.query);
+  var query = loaderUtils.getOptions(this.query);
   // save file path  as source file hash
   var url = loaderUtils.interpolateName(this, query.name || "[hash].[ext]", {
     content: content,

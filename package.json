@@ -19,7 +19,7 @@
   "author": "ice yan <24732077@qq.com>",
   "license": "MIT",
   "dependencies": {
-    "loader-utils": "^0.2.16",
+    "loader-utils": "^1.1.0",
     "imagemin": "^5.2.2",
     "mine": "^0.1.0",
     "imagemin-webp": "^4.0.0"
