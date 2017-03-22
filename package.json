@@ -1,6 +1,6 @@
 {
   "name": "towebp-loader",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "WebP image loader & converter for Webpack && 保留源文件和生成的webp文件，如果使用hash命名，则使用源文件的hash。本loader已经继承了file-loader的功能",
   "main": "index.js",
   "scripts": {

@@ -29,7 +29,7 @@ module.exports = function(content) {
   }
   var mimetype = query.mimetype || query.minetype || mime.lookup(this.resourcePath);
   if (limit <= 0 || content.length < limit) {
-    return "module.exports = " + JSON.stringify("data:" + (mimetype ? mimetype + ";" : "") + "base64," + content.toString("base64"));
+    callback(null, "module.exports = " + JSON.stringify("data:" + (mimetype ? mimetype + ";" : "") + "base64," + content.toString("base64")));
   }
 
   var options = {
@@ -53,7 +53,7 @@ module.exports = function(content) {
   }
 
   if (this.debug === true && options.bypassOnDebug === true) {
-    return "module.exports = __webpack_public_path__ + " + JSON.stringify(url) + ";";
+    callback(null, "module.exports = __webpack_public_path__ + " + JSON.stringify(url) + ";");
   } else {
     imagemin.buffer(content, { plugins: [imageminWebp(options)] }).then(file => {
       this.emitFile(url, content);
